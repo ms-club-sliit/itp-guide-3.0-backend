@@ -1,5 +1,7 @@
-package com.example.demo.itpguidebackend.todos;
+package com.example.demo.itpguidebackend.todos.services;
 
+import com.example.demo.itpguidebackend.todos.models.Todo;
+import com.example.demo.itpguidebackend.todos.repositories.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
