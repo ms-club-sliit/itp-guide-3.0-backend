@@ -1,4 +1,4 @@
-package com.example.demo.itpguidebackend.todos;
+package com.example.demo.itpguidebackend.todos.models;
 
 import lombok.*;
 

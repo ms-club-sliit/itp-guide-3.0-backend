@@ -1,5 +1,7 @@
-package com.example.demo.itpguidebackend.todos;
+package com.example.demo.itpguidebackend.todos.controllers;
 
+import com.example.demo.itpguidebackend.todos.services.TodoService;
+import com.example.demo.itpguidebackend.todos.models.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
