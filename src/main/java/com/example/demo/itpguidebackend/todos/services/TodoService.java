@@ -27,11 +27,10 @@ public class TodoService {
         return "Todo with id " + id + " successfully deleted.";
     }
 
-    public String updateTodo(Todo todo) {
-        Todo existingTodo = todoRepository.findById(todo.getId()).orElse(null);
+    public String updateTodo(Todo todo, int id) {
+        Todo existingTodo = todoRepository.findById(id).orElse(null);
         existingTodo.setDescription(todo.getDescription());
-        existingTodo.setCategory(todo.getCategory());
-        existingTodo.setDueDate(todo.getDueDate());
+        existingTodo.setStatus(todo.getStatus());
         todoRepository.save(existingTodo);
 
         return "Todo with id " + todo.getId() + " successfully updated.";

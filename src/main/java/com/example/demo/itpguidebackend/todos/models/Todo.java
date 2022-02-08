@@ -22,9 +22,6 @@ public class Todo {
     private String description;
 
     @Column(name = "category")
-    private String category;
-
-    @Column(name = "dueDate")
-    private Date dueDate;
+    private Boolean status;
 
 }
