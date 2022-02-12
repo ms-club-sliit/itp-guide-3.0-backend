@@ -18,22 +18,23 @@ public class TodoService {
     }
 
     public String addTodo(Todo todo) {
+        todo.setStatus(false);
         todoRepository.save(todo);
         return "Todo with id " + todo.getId() + " successfully saved.";
     }
 
-    public String deleteTodo(int id) {
+    public String deleteTodo(String id) {
         todoRepository.deleteById(id);
         return "Todo with id " + id + " successfully deleted.";
     }
 
-    public String updateTodo(Todo todo, int id) {
-        Todo existingTodo = todoRepository.findById(id).orElse(null);
+    public String updateTodo(Todo todo, String id) {
+        Todo existingTodo = (Todo) todoRepository.findById(id).orElse(null);
         existingTodo.setDescription(todo.getDescription());
         existingTodo.setStatus(todo.getStatus());
         todoRepository.save(existingTodo);
 
-        return "Todo with id " + todo.getId() + " successfully updated.";
+        return "Todo with id " + id + " successfully updated.";
     }
 
 }

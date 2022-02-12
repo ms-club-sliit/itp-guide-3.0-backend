@@ -10,10 +10,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Document
+@Document(collection = "todo")
 public class Todo {
     @Id
-    private int id;
+    private String id;
     private String description;
     private Boolean status;
 }
